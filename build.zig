@@ -34,4 +34,22 @@ pub fn build(b: *std.Build) void {
     const install_obj = b.step("obj", "Builds the userlib as a .o file");
     install_obj.dependOn(&obj_install.step);
     b.getInstallStep().dependOn(&obj_install.step);
+
+    // add a test step for the userlib
+    const test_step = b.step("test", "Run unit tests");
+    const local_target = b.standardTargetOptions(.{});
+    const test_exe = b.addTest(.{
+        .root_source_file = b.path("src/main.zig"),
+        .target = local_target,
+    });
+    test_exe.addIncludePath(b.path("include"));
+    const stubs = b.addStaticLibrary(.{
+        .name = "stubs",
+        .root_source_file = b.path("src/stub.zig"),
+        .target = local_target,
+        .optimize = optimize,
+    });
+    test_exe.linkLibrary(stubs);
+    const run_tests = b.addRunArtifact(test_exe);
+    test_step.dependOn(&run_tests.step);
 }

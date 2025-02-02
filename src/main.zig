@@ -13,6 +13,7 @@ export fn competition_initialize() callconv(.C) void {
 /// Gets called during the robot-disabled period
 export fn disabled() callconv(.C) void {
     _ = pros.printf("hello, world from the disabled function");
+    _ = pros.motors.motor_move(1, 86);
 }
 
 /// Gets called during the driver-control period
