@@ -29,7 +29,7 @@ IS_LIBRARY:=1
 # Be sure that your header files are in the include directory inside of a folder with the
 # same name as what you set LIBNAME to below.
 LIBNAME:=pros-zig-template
-VERSION:=1.1.0
+VERSION:=1.1.1
 # EXCLUDE_SRC_FROM_LIB= $(SRCDIR)/unpublishedfile.c
 # this line excludes opcontrol.c and similar files
 EXCLUDE_SRC_FROM_LIB+=$(foreach file, $(SRCDIR)/main,$(foreach cext,$(CEXTS),$(file).$(cext)) $(foreach cxxext,$(CXXEXTS),$(file).$(cxxext)))
@@ -39,7 +39,7 @@ EXCLUDE_SRC_FROM_LIB+=$(foreach file, $(SRCDIR)/main,$(foreach cext,$(CEXTS),$(f
 # that are in the directory include/LIBNAME
 TEMPLATE_FILES=$(INCDIR)/$(LIBNAME)/*.h $(INCDIR)/$(LIBNAME)/*.hpp
 TEMPLATE_FILES+= $(ROOT)/build.zig $(ROOT)/build.zig.zon $(ROOT)/zig.mk $(ROOT)/flake.nix $(ROOT)/flake.lock $(ROOT)/template-gitignore
-TEMPLATE_FILES+= $(SRCDIR)/pros.zig $(SRCDIR)/stub.zig
+TEMPLATE_FILES+= $(INCDIR)/pros.zig $(INCDIR)/stub.zig
 TEMPLATE_FILES+= $(INCDIR)/stdio.h $(INCDIR)/unistd.h $(INCDIR)/stdlib.h $(INCDIR)/math.h $(INCDIR)/errno.h $(INCDIR)/string.h $(INCDIR)/inttypes.h
 
 .DEFAULT_GOAL=quick

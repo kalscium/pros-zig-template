@@ -16,11 +16,11 @@
   ```
 2. Download the template
   ```sh
-  wget https://github.com/kalscium/pros-zig-template/releases/download/v1.1.0/pros-zig-template@1.1.0.zip
+  wget https://github.com/kalscium/pros-zig-template/releases/download/v1.1.1/pros-zig-template@1.1.1.zip
   ```
 3. Fetch the template
   ```sh
-  pros conduct fetch pros-zig-template@1.1.0.zip
+  pros conduct fetch pros-zig-template@1.1.1.zip
   ```
 5. Apply the template
   ```sh
@@ -32,7 +32,7 @@
   - Create a new line above that with the contents `-include zig.mk`
 7. Clean up
   ```sh
-  rm pros-zig-template@1.1.0.zip
+  rm pros-zig-template@1.1.1.zip
   ```
 8. Test that everything's working properly
   ```sh
