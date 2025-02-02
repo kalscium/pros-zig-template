@@ -39,7 +39,7 @@ EXCLUDE_SRC_FROM_LIB+=$(foreach file, $(SRCDIR)/main,$(foreach cext,$(CEXTS),$(f
 # that are in the directory include/LIBNAME
 TEMPLATE_FILES=$(INCDIR)/$(LIBNAME)/*.h $(INCDIR)/$(LIBNAME)/*.hpp
 TEMPLATE_FILES+= $(ROOT)/build.zig $(ROOT)/build.zig.zon $(ROOT)/zig.mk $(ROOT)/flake.nix $(ROOT)/flake.lock $(ROOT)/template-gitignore
-TEMPLATE_FILES+= $(SRCDIR)/pros.zig
+TEMPLATE_FILES+= $(SRCDIR)/pros.zig $(SRCDIR)/stub.zig
 TEMPLATE_FILES+= $(INCDIR)/stdio.h $(INCDIR)/unistd.h $(INCDIR)/stdlib.h $(INCDIR)/math.h $(INCDIR)/errno.h $(INCDIR)/string.h $(INCDIR)/inttypes.h
 
 .DEFAULT_GOAL=quick
