@@ -16,7 +16,7 @@
   ```
 2. Download the template
   ```sh
-  wget https://github.com/kalscium/pros-zig-template/releases/download/v1.1.1/pros-zig-template@1.1.1.zip
+  wget https://github.com/kalscium/pros-zig-template/releases/download/v1.1.2/pros-zig-template@1.1.1.zip
   ```
 3. Fetch the template
   ```sh
